@@ -97,8 +97,6 @@ syn match  htmlH1       /^.\+\n=\+$/ contains=@Spell
 syn match  htmlH2       /^.\+\n-\+$/ contains=@Spell
 
 if get(g:, 'vim_markdown_math', 0)
-  syn region mkdMath matchgroup=mkdDelimiter start="\\\@<!\$" end="\$"
-  syn region mkdMath matchgroup=mkdDelimiter start="\\\@<!\$\$" end="\$\$"
   syn region mkdMath matchgroup=mkdDelimiter start="\\\@<!\\(" end="\\)"
   syn region mkdMath matchgroup=mkdDelimiter start="\\\@<!\\\[" end="\\\]"
 endif
